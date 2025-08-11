@@ -1,8 +1,5 @@
 template(name="minicard")
-  .minicard.nodragscroll(
-    class="{{#if isLinkedCard}}linked-card{{/if}}"
-    class="{{#if isLinkedBoard}}linked-board{{/if}}"
-    class="{{#if colorClass}}minicard-{{colorClass}}{{/if}}")
+  .minicard.nodragscroll(tabindex="0" aria-label="Open card" onkeydown="if(event.key==='Enter'||event.key===' '){openCard();}")
     if canModifyCard
       if isTouchScreenOrShowDesktopDragHandles
         a.fa.fa-navicon.minicard-details-menu-with-handle.js-open-minicard-details-menu(title="{{_ 'cardDetailsActionsPopup-title'}}")
@@ -171,6 +168,8 @@ template(name="minicard")
           .badge
             span.badge-icon.fa.fa-sort
             span.badge-text.check-list-sort {{ sort }}
+    button.fa.fa-star(aria-label="Favorite" tabindex="0")
+    button.add-checklist(aria-label="Add checklist" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){addChecklist();}")
     if currentBoard.allowsDescriptionTextOnMinicard
       if getDescription
         .minicard-description
@@ -185,6 +184,8 @@ template(name="editCardSortOrderPopup")
 template(name="minicardDetailsActionsPopup")
   ul.pop-over-list
     if canModifyCard
+      button.move-up(aria-label="Move card up" tabindex="0")
+      button.move-down(aria-label="Move card down" tabindex="0")
       li
         a.js-move-card
           i.fa.fa-arrow-right

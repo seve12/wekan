@@ -75,6 +75,12 @@
   color: #fff;
   border-radius: 5px;
 }
+.card-details-header .fa {
+  color: #222 !important;
+}
+.card-details .fa, .card-details button {
+  color: #222 !important;
+}
 .card-details {
   padding: 0;
   flex-shrink: 0;

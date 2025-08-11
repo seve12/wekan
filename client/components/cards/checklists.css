@@ -22,6 +22,12 @@ textarea.js-edit-checklist-item {
 .js-convert-checklist-item-to-card:hover {
   color: inherit;
 }
+.checklist-progress-bar {
+  background: #1565c0 !important; /* Use a darker blue */
+}
+.fa-check, .checklist-item .fa-check {
+  color: #006400 !important; /* Use a dark green */
+}
 .checklists-title {
   display: flex;
   justify-content: space-between;

@@ -27,6 +27,27 @@ input::placeholder, textarea::placeholder {
   color: #555 !important;
   opacity: 1;
 }
+input, textarea, select {
+  border: 1px solid #444 !important; /* Use a dark border for better contrast */
+}
+.fc-today {
+  background: #ffe082 !important; /* Use a high-contrast highlight */
+}
+.fa-plus, .add-card {
+  color: #0056b3 !important; /* Use a darker blue or black for contrast */
+}
+.fa-bars, .fa-navicon {
+  color: #222 !important; /* Use a dark color for contrast */
+}
+.fa-times, .close-menu {
+  color: #222 !important;
+}
+.fa-arrow-left, .back-menu {
+  color: #222 !important;
+}
+.fa-arrows, .move-board {
+  color: #222 !important;
+}
 .error-notification {
   color: #fff !important; /* White text */
   background: #d32f2f !important; /* Strong red background */
